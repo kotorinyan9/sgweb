@@ -1,0 +1,440 @@
+/*
+	Theme Name: SwordGirls Theme
+	Author: shana
+
+*/
+
+/*------------------------------------*\
+    MAIN
+\*------------------------------------*/
+
+/* global box-sizing */
+*,
+*:after,
+*:before {
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-font-smoothing:antialiased;
+	font-smoothing:antialiased;
+	text-rendering:optimizeLegibility;
+}
+/* html element 62.5% font-size for REM use */
+html {
+	font-size:62.5%;
+}
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-weight:400;
+	color:#444;
+}
+/* clear */
+.clear:before,
+.clear:after {
+    content:' ';
+    display:table;
+}
+
+.clear:after {
+    clear:both;
+}
+.clear {
+    *zoom:1;
+}
+img {
+	max-width:100%;
+	vertical-align:bottom;
+}
+a {
+	color:#444;
+	text-decoration:none;
+}
+a:hover {
+	color:#444;
+}
+a:focus {
+	outline:0;
+}
+a:hover,
+a:active {
+	outline:0;
+}
+input:focus {
+	outline:0;
+	border:1px solid #04A4CC;
+}
+
+/*------------------------------------*\
+    STRUCTURE
+\*------------------------------------*/
+
+
+/* header */
+.header {
+	
+}
+/* logo */
+.logo {
+	
+}
+.logo-img {
+	
+}
+/* nav */
+.nav {
+	
+}
+/* sidebar */
+.sidebar {
+	
+}
+/* footer */
+.footer {
+	
+}
+
+/*------------------------------------*\
+    PAGES
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+    IMAGES
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+	TYPOGRAPHY
+\*------------------------------------*/
+
+@font-face {
+	font-family:'Font-Name';
+	src:url('fonts/font-name.eot');
+	src:url('fonts/font-name.eot?#iefix') format('embedded-opentype'),
+		url('fonts/font-name.woff') format('woff'),
+		url('fonts/font-name.ttf') format('truetype'),
+		url('fonts/font-name.svg#font-name') format('svg');
+    font-weight:normal;
+    font-style:normal;
+}
+
+/*------------------------------------*\
+    RESPONSIVE
+\*------------------------------------*/
+
+@media only screen and (min-width:320px) {
+
+}
+@media only screen and (min-width:480px) {
+
+}
+@media only screen and (min-width:768px) {
+
+}
+@media only screen and (min-width:1024px) {
+
+}
+@media only screen and (min-width:1140px) {
+
+}
+@media only screen and (min-width:1280px) {
+
+}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5),
+	   only screen and (min-resolution:144dpi) {
+
+}
+
+/*------------------------------------*\
+    MISC
+\*------------------------------------*/
+/*
+::selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-webkit-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-moz-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}*
+   
+/*------------------------------------*\
+    WORDPRESS CORE
+\*------------------------------------*/
+   
+.alignnone {
+	margin:5px 20px 20px 0;
+}
+.aligncenter,
+div.aligncenter {
+	display:block;
+	margin:5px auto 5px auto;
+}
+.alignright {
+	float:right;
+	margin:5px 0 20px 20px;
+}
+.alignleft {
+	float:left;
+	margin:5px 20px 20px 0;
+}
+.aligncenter {
+	display:block;
+	margin:5px auto 5px auto;
+}
+a img.alignright {
+	float:right;
+	margin:5px 0 20px 20px;
+}
+a img.alignnone {
+	margin:5px 20px 20px 0;
+}
+a img.alignleft {
+	float:left;
+	margin:5px 20px 20px 0;
+}
+a img.aligncenter {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+.wp-caption {
+	background:#FFF;
+	border:1px solid #F0F0F0;
+	max-width:96%;
+	padding:5px 3px 10px;
+	text-align:center;
+}
+.wp-caption.alignnone {
+	margin:5px 20px 20px 0;
+}
+.wp-caption.alignleft {
+	margin:5px 20px 20px 0;
+}
+.wp-caption.alignright {
+	margin:5px 0 20px 20px;
+}
+.wp-caption img {
+	border:0 none;
+	height:auto;
+	margin:0;
+	max-width:98.5%;
+	padding:0;
+	width:auto;
+}
+.wp-caption .wp-caption-text,
+.gallery-caption {
+	font-size:11px;
+	line-height:17px;
+	margin:0;
+	padding:0 4px 5px;
+}
+.sticky {
+	
+}
+.bypostauthor {
+	
+}
+
+/*------------------------------------*\
+    PRINT
+\*------------------------------------*/
+
+@media print {
+	* {
+		background:transparent !important;
+		color:#000 !important;
+		box-shadow:none !important;
+		text-shadow:none !important;
+	}
+	a,
+	a:visited {
+		text-decoration:underline;
+	}
+	a[href]:after {
+		content:" (" attr(href) ")";
+	}
+	abbr[title]:after {
+		content:" (" attr(title) ")";
+	}
+	.ir a:after,
+	a[href^="javascript:"]:after,
+	a[href^="#"]:after {
+		content:"";
+	}
+	pre,blockquote {
+		border:1px solid #999;
+		page-break-inside:avoid;
+	}
+	thead {
+		display:table-header-group;
+	}
+	tr,img {
+		page-break-inside:avoid;
+	}
+	img {
+		max-width:100% !important;
+	}
+	@page {
+		margin:0.5cm;
+	}
+	p,
+	h2,
+	h3 {
+		orphans:3;
+		widows:3;
+	}
+	h2,
+	h3 {
+		page-break-after:avoid;
+	}
+}
+
+
+body{
+
+}
+.cloth{
+	font-size:70px;
+	display:none;
+	position: absolute;
+	z-index:99999;
+	color:#fff;
+}
+.container{
+	font-size:20px;
+	position:fixed;
+	top: 50%;
+	left: 43%;
+	margin-top: -100px;
+	margin-left: -250px;
+	text-align:center;
+	background:;
+
+}
+.sharp{
+	margin:0px auto;
+	width:850px;
+	position: relative;
+	height:944px;
+}
+.eye{
+	background:url('http://swordgirls.net/wordpress/wp-content/themes/swordgirls/img/eye.png') no-repeat center;
+	position:absolute;
+	top:146px;
+	left:331px;
+	height:190px;
+	width:190px;	
+}
+.left{
+	margin:0px;
+	margin-left:-500px;
+	opacity: 0;
+}
+
+.first{
+	background:url('http://swordgirls.net/wordpress/wp-content/themes/swordgirls/img/sharp-1.jpg') no-repeat center;
+}
+
+.second{
+	background:url('http://swordgirls.net/wordpress/wp-content/themes/swordgirls/img/sharp-2.jpg') no-repeat center;	
+}
+.third{
+	background:url('http://swordgirls.net/wordpress/wp-content/themes/swordgirls/img/sharp-3.jpg') no-repeat center;	
+}
+.tail{
+	position:absolute;
+	bottom:190px;
+	right:145px;
+	height:190px;
+	width:190px;
+	background:url('http://swordgirls.net/wordpress/wp-content/themes/swordgirls/img/trans.png') no-repeat center;
+	opacity: 0;
+   transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;	
+}
+
+.tail:hover{
+	opacity: 1;
+	cursor: pointer;
+	
+}
+
+.red{
+	color:#fb604e;
+	font-size:30px;
+}
+
+.red:hover{
+	cursor: pointer;
+}
+
+.c{
+
+	position:fixed;
+	top:70px;
+	left:20px;
+	font-size:14px;
+
+}
+.gt{
+	position:fixed;
+	top:0px;
+	left:20px;
+	font-size:20px;
+	color:#ff0066;
+}
+
+.bar1{
+	background:url('http://swordgirls.net/wordpress/wp-content/themes/swordgirls/img/battle-bar.png') no-repeat center;	
+	display:none;
+	position: fixed;
+	height:778px;
+	width:100%;
+	margin:0px auto;
+	top:-778px;
+	z-index:10000;
+}
+
+.bg{
+	width:100%;
+	height:2000px;
+	background: rgba(0,0,0,.5);
+	position:fixed;
+	z-index:9999;
+	display:none;
+}
+
+.gauge{
+	position: fixed;
+	width:602px;
+	border:1px solid #dfdfdf;
+	top:30px;
+	left:10px;
+	height:32px;
+	z-index:9999;
+}
+
+.powerbar{
+	width:20px;
+	height:30px;
+	background:#8de05b;
+	float:left;
+}
+
+.glow{
+	-webkit-box-shadow:0 0 20px #6eff03; 
+	-moz-box-shadow: 0 0 20px #6eff03;  box-shadow:0 0 20px #6eff03;
+}
+
