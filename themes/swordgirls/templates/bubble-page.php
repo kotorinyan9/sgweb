@@ -1,12 +1,16 @@
+ <?php 
+ /* Template Name: bubble-page */
+ ?>
+
 <?php get_header('new'); ?>
 <div class="row main-content">
 	<div class="col-md-8 col-sm-8">
 
-		<h1 class=""><?php the_title(); ?></h1>
+		
 		
 		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			
+			<article id="post-<?php the_ID(); ?>" <?php post_class('left-side'); ?>>
+				<h1 ><?php the_title(); ?></h1>
 				<?php the_content(); ?>
 				<br class="clearfix" style="margin-top:20px;">
 				<?php edit_post_link(); ?>

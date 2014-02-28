@@ -40,28 +40,29 @@ if (function_exists('add_theme_support'))
 \*------------------------------------*/
 
 // HTML5 Blank navigation
-function html5blank_nav()
+function headerNav()
 {
-	wp_nav_menu(
+	$menu = wp_nav_menu(
 	array(
 		'theme_location'  => 'header-menu',
 		'menu'            => '', 
-		'container'       => 'div', 
-		'container_class' => 'menu-{menu slug}-container', 
+		'container'       => '', 
+		'container_class' => '', 
 		'container_id'    => '',
-		'menu_class'      => 'menu', 
+		'menu_class'      => '', 
 		'menu_id'         => '',
 		'echo'            => true,
-		'fallback_cb'     => 'wp_page_menu',
+		'fallback_cb'     => '',
 		'before'          => '',
 		'after'           => '',
-		'link_before'     => '<div class="menu-box">','link_after'=>'</div>',
+		'link_before'     => '',
 		'link_after'      => '',
 		'items_wrap'      => '<ul>%3$s</ul>',
 		'depth'           => 0,
 		'walker'          => ''
 		)
 	);
+
 }
 
 
@@ -122,24 +123,18 @@ function html5blank_header_scripts()
     	wp_deregister_script('jquery'); // Deregister WordPress jQuery
     	wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js', array(), '1.9.1'); // Google CDN jQuery
     	wp_enqueue_script('jquery'); // Enqueue it!
-    	
-    //	wp_register_script('conditionizr', 'http://cdnjs.cloudflare.com/ajax/libs/conditionizr.js/2.2.0/conditionizr.min.js', array(), '2.2.0'); // Conditionizr
-      //  wp_enqueue_script('conditionizr'); // Enqueue it!
-        
-        /*wp_register_script('modernizr', 'http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js', array(), '2.6.2'); // Modernizr
-        wp_enqueue_script('modernizr'); // Enqueue it!*/
-        
+
         wp_register_script('bxslider', get_template_directory_uri() . '/js/jquery.bxslider.min.js', array(), '1.0.0'); // Custom scripts
         wp_enqueue_script('bxslider'); // Enqueue it!
 
         wp_register_script('scripts', get_template_directory_uri() . '/js/scripts.js', array(), '1.0.0'); // Custom scripts
         wp_enqueue_script('scripts'); // Enqueue it!   
+
         wp_register_script('fb', get_template_directory_uri() . '/js/jquery.fancybox.pack.js', array(), '1.0.0'); // Custom scripts
         wp_enqueue_script('fb'); // Enqueue it!             
-        //wp_register_script('skr', get_template_directory_uri() . '/js/skrollr.js', array(), '1.0.0'); // Custom scripts
-        //wp_enqueue_script('skr'); // Enqueue it!       
 
-
+        wp_register_script('bootstrap', get_template_directory_uri() . '/lib/bootstrap/js/bootstrap.min.js', array(), '1.0.0'); // Custom scripts
+        wp_enqueue_script('bootstrap'); // Enqueue it!                     
     }
 }
 
@@ -193,9 +188,10 @@ function team( $atts ){
         {
             $image_object = $row['image'];
             $image =  $image_object['sizes']['medium'];
-            $output .= "<li><h3>" . $row['ign'] . "</h3>";
-            $output .= "<img src='". $image ."'>";
-            $output .= "<p>" . $row['description']. "</p></li>";
+            $output .= "<li class='col-sm-3 col-xs-4'>";
+            $output .= "<span><img src='". $image ."'>";
+            $output .= "<div class='overlay'><h3>" . $row['ign'] ." <br> ".$row['description'] . "</h3></div>";
+            $output .= "</span></li>";
         }  
         $output .='</ul>';
     }else{
@@ -219,8 +215,9 @@ function html5blank_conditional_scripts()
 // Load HTML5 Blank styles
 function html5blank_styles()
 {
-    //wp_register_style('normalize', get_template_directory_uri() . '/normalize.css', array(), '1.0', 'all');
-   // wp_enqueue_style('normalize'); // Enqueue it!
+    wp_register_style('bootstrap', get_template_directory_uri() . '/lib/bootstrap/css/bootstrap.css', array(), '1.0', 'all');
+    wp_enqueue_style('bootstrap'); // Enqueue it
+
     wp_register_style('bxslider', get_template_directory_uri() . '/css/jquery.bxslider.css', array(), '1.0', 'all');
     wp_enqueue_style('bxslider'); // Enqueue it!    
     wp_register_style('theme', get_template_directory_uri() . '/css/theme.css', array(), '1.0', 'all');

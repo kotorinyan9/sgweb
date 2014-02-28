@@ -16,11 +16,10 @@
 	<ul class="bxslider">
 	<?php while ( $query_posts->have_posts() ) : $query_posts->the_post();  ?>
 		<?php if($repeater = get_field('repeater_slider')): ?>
-		<?
+		<?php 
 			foreach( $repeater as $key => $row )
-			{
 			    $column_id[ $key ] = $row['sort_order'];
-			}  
+
 			array_multisort( $column_id, SORT_ASC, $repeater );
 		?>
 			<?php foreach( $repeater as $key => $row ): ?>

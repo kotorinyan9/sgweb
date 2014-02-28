@@ -1,8 +1,9 @@
 
-	<div class="footer" role="contentinfo">
-		<div class="wrapper" >
-		<?php footer_nav(array('theme_loation' => 'extra-menu'));?>
-		<p>&#169; Swordgirls.net 2013 - Powered by Sita's Pantsu</p>
+	<div class="footer">
+		<div class="row">
+			<?php footer_nav(array('theme_loation' => 'extra-menu'));?>
+			<p>&#169; Swordgirls.net 2014 - Powered by Sita's Pantsu</p>
+		</div>
 	</div>
 </div>
 			
